@@ -73,6 +73,9 @@
     <EmbeddedResource Include="NonParameterizedQueriesForm.resx">
       <DependentUpon>NonParameterizedQueriesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ParameterizedQueriesForm.resx">
+      <DependentUpon>ParameterizedQueriesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

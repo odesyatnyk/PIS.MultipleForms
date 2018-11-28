@@ -88,6 +88,7 @@ namespace MultipleFormsShowCase
                     MessageBox.Show(ex.Message);
                 }
             }
+            MessageBox.Show("Query successfully completed");
         }
 
         private void buttonCloseForm_Click(object sender, EventArgs e)
