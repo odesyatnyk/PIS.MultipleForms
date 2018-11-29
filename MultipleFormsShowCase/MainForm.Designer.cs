@@ -28,60 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonNonPar = new System.Windows.Forms.Button();
-            this.buttonPar = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.nonParaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parameterizedQueriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonNonPar
+            // menuStrip1
             // 
-            this.buttonNonPar.Location = new System.Drawing.Point(66, 39);
-            this.buttonNonPar.Name = "buttonNonPar";
-            this.buttonNonPar.Size = new System.Drawing.Size(112, 37);
-            this.buttonNonPar.TabIndex = 0;
-            this.buttonNonPar.Text = "Non Parameterized Queries";
-            this.buttonNonPar.UseVisualStyleBackColor = true;
-            this.buttonNonPar.Click += new System.EventHandler(this.buttonNonPar_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nonParaToolStripMenuItem,
+            this.parameterizedQueriesToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(350, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // buttonPar
+            // nonParaToolStripMenuItem
             // 
-            this.buttonPar.Location = new System.Drawing.Point(66, 82);
-            this.buttonPar.Name = "buttonPar";
-            this.buttonPar.Size = new System.Drawing.Size(112, 37);
-            this.buttonPar.TabIndex = 1;
-            this.buttonPar.Text = "Parameterized Queries";
-            this.buttonPar.UseVisualStyleBackColor = true;
-            this.buttonPar.Click += new System.EventHandler(this.buttonPar_Click);
+            this.nonParaToolStripMenuItem.Name = "nonParaToolStripMenuItem";
+            this.nonParaToolStripMenuItem.Size = new System.Drawing.Size(163, 20);
+            this.nonParaToolStripMenuItem.Text = "Non Parameterized Queries";
+            this.nonParaToolStripMenuItem.Click += new System.EventHandler(this.nonParaToolStripMenuItem_Click);
             // 
-            // buttonExit
+            // parameterizedQueriesToolStripMenuItem
             // 
-            this.buttonExit.Location = new System.Drawing.Point(66, 125);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(112, 37);
-            this.buttonExit.TabIndex = 2;
-            this.buttonExit.Text = "Exit";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.parameterizedQueriesToolStripMenuItem.Name = "parameterizedQueriesToolStripMenuItem";
+            this.parameterizedQueriesToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.parameterizedQueriesToolStripMenuItem.Text = "Parameterized Queries";
+            this.parameterizedQueriesToolStripMenuItem.Click += new System.EventHandler(this.parameterizedQueriesToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(350, 31);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Hello";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(0, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(350, 80);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Select one of the menu items to see what the program is capable of.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 226);
-            this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonPar);
-            this.Controls.Add(this.buttonNonPar);
+            this.ClientSize = new System.Drawing.Size(350, 135);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(366, 174);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonNonPar;
-        private System.Windows.Forms.Button buttonPar;
-        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem nonParaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parameterizedQueriesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

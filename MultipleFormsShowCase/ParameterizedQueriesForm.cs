@@ -40,7 +40,6 @@ namespace MultipleFormsShowCase
 
         private void buttonRunSelect_Click(object sender, EventArgs e)
         {
-            StringBuilder stringBuilder = new StringBuilder();
             using (OdbcConnection connection = new OdbcConnection(ConfigurationManager.ConnectionStrings["KraftHeinzConnectionStringOdbc"].ConnectionString))
             {
                 connection.Open();
@@ -49,16 +48,12 @@ namespace MultipleFormsShowCase
                 command.Parameters.Add("@term", OdbcType.NVarChar, 100).Value = textBoxSelect.Text;
                 using (OdbcDataReader reader = command.ExecuteReader())
                 {
-                    while (reader.Read())
-                    {
-                        var objs = new object[4];
-                        reader.GetValues(objs);
-                        stringBuilder.AppendLine(objs.Select(x => x.ToString()).Aggregate((x, y) => x + ", " + y));
-                    }
+                    DataTable datTable = new DataTable("Results");
+                    datTable.Load(reader);
+                    resultsGrid.DataSource = datTable;
                 }
 
             }
-            MessageBox.Show(stringBuilder.ToString());
         }
 
         private void buttonRunScalar_Click(object sender, EventArgs e)

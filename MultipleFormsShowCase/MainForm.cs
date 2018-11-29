@@ -20,12 +20,7 @@ namespace MultipleFormsShowCase
             InitializeComponent();
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void buttonNonPar_Click(object sender, EventArgs e)
+        private void nonParaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (NonParameterizedQueriesForm == null)
             {
@@ -38,17 +33,7 @@ namespace MultipleFormsShowCase
             }
         }
 
-        public void CleanNonParameterizedQueriesForm()
-        {
-            NonParameterizedQueriesForm = null;
-        }
-
-        public void CleanParameterizedQueriesForm()
-        {
-            ParameterizedQueriesForm = null;
-        }
-
-        private void buttonPar_Click(object sender, EventArgs e)
+        private void parameterizedQueriesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ParameterizedQueriesForm == null)
             {
@@ -60,5 +45,21 @@ namespace MultipleFormsShowCase
                 MessageBox.Show($"Form {nameof(ParameterizedQueriesForm)} is already opened");
             }
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void CleanNonParameterizedQueriesForm()
+        {
+            NonParameterizedQueriesForm = null;
+        }
+
+        public void CleanParameterizedQueriesForm()
+        {
+            ParameterizedQueriesForm = null;
+        }
+
     }
 }

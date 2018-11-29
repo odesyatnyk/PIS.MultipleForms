@@ -31,11 +31,13 @@
             this.buttonRunQuery = new System.Windows.Forms.Button();
             this.buttonRunNonQuery = new System.Windows.Forms.Button();
             this.buttonCloseForm = new System.Windows.Forms.Button();
+            this.resultsGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.resultsGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonRunQuery
             // 
-            this.buttonRunQuery.Location = new System.Drawing.Point(37, 36);
+            this.buttonRunQuery.Location = new System.Drawing.Point(377, 12);
             this.buttonRunQuery.Name = "buttonRunQuery";
             this.buttonRunQuery.Size = new System.Drawing.Size(112, 37);
             this.buttonRunQuery.TabIndex = 1;
@@ -45,7 +47,7 @@
             // 
             // buttonRunNonQuery
             // 
-            this.buttonRunNonQuery.Location = new System.Drawing.Point(37, 90);
+            this.buttonRunNonQuery.Location = new System.Drawing.Point(377, 55);
             this.buttonRunNonQuery.Name = "buttonRunNonQuery";
             this.buttonRunNonQuery.Size = new System.Drawing.Size(112, 37);
             this.buttonRunNonQuery.TabIndex = 2;
@@ -55,7 +57,7 @@
             // 
             // buttonCloseForm
             // 
-            this.buttonCloseForm.Location = new System.Drawing.Point(37, 145);
+            this.buttonCloseForm.Location = new System.Drawing.Point(377, 193);
             this.buttonCloseForm.Name = "buttonCloseForm";
             this.buttonCloseForm.Size = new System.Drawing.Size(112, 37);
             this.buttonCloseForm.TabIndex = 3;
@@ -63,16 +65,26 @@
             this.buttonCloseForm.UseVisualStyleBackColor = true;
             this.buttonCloseForm.Click += new System.EventHandler(this.buttonCloseForm_Click);
             // 
+            // resultsGrid
+            // 
+            this.resultsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resultsGrid.Location = new System.Drawing.Point(12, 12);
+            this.resultsGrid.Name = "resultsGrid";
+            this.resultsGrid.Size = new System.Drawing.Size(359, 218);
+            this.resultsGrid.TabIndex = 4;
+            // 
             // NonParameterizedQueriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(180, 222);
+            this.ClientSize = new System.Drawing.Size(500, 242);
+            this.Controls.Add(this.resultsGrid);
             this.Controls.Add(this.buttonCloseForm);
             this.Controls.Add(this.buttonRunNonQuery);
             this.Controls.Add(this.buttonRunQuery);
             this.Name = "NonParameterizedQueriesForm";
             this.Text = "NonParameterizedQueriesForm";
+            ((System.ComponentModel.ISupportInitialize)(this.resultsGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button buttonRunQuery;
         private System.Windows.Forms.Button buttonRunNonQuery;
         private System.Windows.Forms.Button buttonCloseForm;
+        private System.Windows.Forms.DataGridView resultsGrid;
     }
 }
